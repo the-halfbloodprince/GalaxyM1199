@@ -1,0 +1,42 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.heading{
+    font-family: 'Space Mono', monospace;
+    z-index: 3;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    color: white;
+}
+
+.heading h1{
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.heading h4{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 10px;
+}
+
+
+/*# sourceMappingURL=main.css.map*/

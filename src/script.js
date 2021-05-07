@@ -39,17 +39,17 @@ parameters.starColor = '#1b3984'
 parameters.insideColor = '#ff6030'
 parameters.outsideColor = '#1b3984'
 
-gui.add(parameters, 'count').min(100).max(100000).step(100).onChange(generateGalaxy)
-gui.add(parameters, 'stars').min(0).max(100000).step(100).onChange(generateBgStars)
-gui.addColor(parameters, 'starColor').onChange(generateBgStars)
-gui.add(parameters, 'size').min(0.001).max(0.1).step(0.001).onChange(generateGalaxy)
-gui.add(parameters, 'radius').min(1).max(10).step(1).onChange(generateGalaxy)
-gui.add(parameters, 'branches').min(1).max(10).step(1).onChange(generateGalaxy)
-gui.add(parameters, 'spin').min(-5).max(5).step(0.001).onChange(generateGalaxy)
+gui.add(parameters, 'count').min(100).max(100000).step(100).onChange(generateGalaxy).name('stars in galaxy')
+gui.add(parameters, 'stars').min(0).max(100000).step(100).onChange(generateBgStars).name('background stars')
+gui.addColor(parameters, 'starColor').onChange(generateBgStars).name('color of stars')
+gui.add(parameters, 'size').min(0.001).max(0.1).step(0.001).onChange(generateGalaxy).name('size of stars in galaxy')
+gui.add(parameters, 'radius').min(1).max(10).step(1).onChange(generateGalaxy).name('radius of galaxy')
+gui.add(parameters, 'branches').min(1).max(10).step(1).onChange(generateGalaxy).name('branches in galaxy')
+gui.add(parameters, 'spin').min(-5).max(5).step(0.001).onChange(generateGalaxy).name('spin of the galaxy')
 gui.add(parameters, 'randomness').min(0).max(2).step(0.01).onChange(generateGalaxy)
-gui.add(parameters, 'randomnessPower').min(1).max(5).step(1).onChange(generateGalaxy)
-gui.addColor(parameters, 'insideColor').onChange(generateGalaxy)
-gui.addColor(parameters, 'outsideColor').onChange(generateGalaxy)
+gui.add(parameters, 'randomnessPower').min(1).max(10).step(1).onChange(generateGalaxy)
+gui.addColor(parameters, 'insideColor').onChange(generateGalaxy).name('color of core')
+gui.addColor(parameters, 'outsideColor').onChange(generateGalaxy).name('color of branches')
 
 
 let bgStarsGeometry = null
